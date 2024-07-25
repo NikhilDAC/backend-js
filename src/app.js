@@ -12,8 +12,8 @@ app.use(cors({
     origin:process.env.CORS_ORIGIN
 }))
 /*
-on server we accept the in the lot's of format such as json,form,string,file
-to handle this we need to configure it.For conguring it we need to use app.use()
+on server we accept the data in the lot's of format such as json,form,string,file
+to handle this we need to configure it.For confuring it we need to use app.use()
 */
 app.use(express.json({limit:"16kb"}))
 
