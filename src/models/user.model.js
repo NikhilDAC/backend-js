@@ -16,8 +16,6 @@ const userSchema=new mongoose.Schema({
         trim:true,
         lowercase:true,
         index:true,
-
-
     },
     fullName:{
         type:String,
@@ -53,7 +51,7 @@ userSchema.methods.generateAccessToken=function(){
 userSchema.methods.generateRefershToken=function(){
     return jwt.sign(
         {_id:this._id,
-         // we have less information inside the referesh token
+         // we putless information inside the referesh token
     },
     process.env.REFRESH_TOKEN_SECRECT,
     {
